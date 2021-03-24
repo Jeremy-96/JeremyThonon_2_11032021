@@ -34,6 +34,7 @@ header img {
     width:97px;
     height:45px;
 }
+    /* Links parameters */
 #top {
     display:flex;
     flex-direction: row;
@@ -69,6 +70,44 @@ a {
 a:hover {
     padding-top: 25px;
     border-top: 1px solid #0065FC;
+}
+    /* Search bar */
+#inp_txt {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+}
+#ico_loc {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 40px;
+    background-color: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+
+}
+i {
+    margin: auto;
+}
+#search {
+    font-family: 'Raleway';
+    height: 40px;
+    width: 200px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+button {
+    font-family: 'Raleway';
+    height: 40px;
+    width: 120px;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #0065FC;
+    font-size: 16px;
+    background-color: #0065FC;
+    color: white;
 }
 
 
