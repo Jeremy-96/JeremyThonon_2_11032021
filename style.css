@@ -1,0 +1,171 @@
+/* Dimensions de page */
+body {
+    margin:30px;
+}
+
+#block_page {
+    width: 100%;
+    border: 1px solid black;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Partie supérieure de la page: titre, filtres, navigation */
+header {
+    width:100%;
+    height:200px;
+    display:flex;
+    flex-direction: column;
+}
+
+#top {
+    height:25%;
+    border:1px solid grey;
+}
+#nav {
+    height:75%;
+    border:1px solid grey;
+}
+
+/* Contenu de la page: photos */
+section {
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+}
+#hos_pop {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+#hosts {
+    order:1;
+    width:60%;
+    height:230px;
+    border:1px solid grey;
+}
+#popular {
+    width: 30%;
+    order:2;
+    height:230px;
+    border:1px solid grey;
+}
+#activities {
+    order:3;
+    height:230px;
+    border:1px solid grey;
+}
+
+/* Pied de la page: liste d'aide */
+footer {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+#frst {
+    order:1;
+    width:auto;
+    border:1px solid grey;
+}
+#scnd {
+    order:2;
+    width:auto;
+    border:1px solid grey;
+}
+#thrd {
+    order:3;
+    width:auto;
+    border:1px solid grey;
+}
+
+
+
+/* Adaptation aux smartphones */
+@media all and (max-device-width: 480px)
+{
+    body {
+        margin:30px;
+    }
+    
+    #block_page {
+        width: 100%;
+        border: 1px solid black;
+        display:flex;
+        flex-direction:column;
+    }
+    
+    header {
+        width:100%;
+        height:200px;
+        display:flex;
+        flex-direction: column;
+    }
+    
+    #top {
+        order:1;
+        height:25%;
+        border:1px solid grey;
+    }
+    #nav {
+        order:2;
+        height:75%;
+        border:1px solid grey;
+    }
+    
+    
+    section {
+        width:100%;
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+    }
+    #hos_pop {
+        display:flex;
+        flex-direction:column;
+    }
+    
+    #hosts {
+        order:2;
+        width:100%;
+        height:230px;
+        border:1px solid grey;
+    }
+    #popular {
+        width: 100%;
+        order:1;
+        height:230px;
+        border:1px solid grey;
+    }
+    #activities {
+        order:3;
+        height:230px;
+        border:1px solid grey;
+    }
+    
+    footer {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+    }
+    
+    #frst {
+        order:1;
+        width:auto;
+        border:1px solid grey;
+    }
+    #scnd {
+        order:2;
+        width:auto;
+        border:1px solid grey;
+    }
+    #thrd {
+        order:3;
+        width:auto;
+        border:1px solid grey;
+    }
+}
