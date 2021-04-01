@@ -1,214 +1,322 @@
 /* Dimensions de page */
 body {
     margin:30px;
+    display:flex;
+    flex-direction:column;
 }
 
 #block_page {
     width: 100%;
-    border: 1px solid black;
     display:flex;
     flex-direction:column;
     justify-content: space-around;
+    align-items: center;
 }
 
 /* Partie supérieure de la page: titre, filtres, navigation */
 header {
-    width:100%;
-    height:200px;
+    width:95%;
     display:flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    justify-content: flex-start;
 }
 
 #top {
-    height:25%;
     border:1px solid grey;
 }
 #nav {
-    height:75%;
     border:1px solid grey;
 }
 
 /* Contenu de la page: photos */
 section {
-    width:100%;
+    width:95%;
     display: flex;
-    flex-direction:column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
+    justify-content: flex-start;
 }
 #hos_pop {
     margin: 15px 0 15px 0;
     display:flex;
-    flex-direction:row;
+    flex-flow:row wrap;
     justify-content: space-between;
 }
 
+/* Hébergements à Marseille */
 #hosts {
     order:1;
     width:60%;
-    height:600px;
     border:1px solid #808080;
     display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow:column wrap;
     justify-content: flex-start;
     align-content: center;
 }
 #hosts_pics {
     border:1px solid black;
     width:90%;
-    height:70%;
     display:flex;
-    flex-flow:row wrap;
-    justify-content: space-between;
-    align-content:center;
-    
-
+    flex-flow:column wrap;
+    align-items:center;
+}
+#ho_pi1 {
+    border:1px solid black;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+#ho_pi2 {
+    border:1px solid black;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
 }
 .pics {
-    border: 1px solid black;
-    height:50%;
-    width:33%;
-
+    border:1px solid black;
 }
+
+/* Les plus populaires */
 #popular {
     width: 35%;
     order:2;
-    height:600px;
     border:1px solid grey;
     display:flex;
     flex-direction:column;
-    flex-wrap:wrap;
     justify-content:flex-start;
     align-content:center;
 }
 #popular_pics {
     border:1px solid black;
-    width:85%;
-    height:85%;
+    width:90%;
     display:flex;
-    flex-flow:column wrap;
-    justify-content: space-between;
-    align-content:center;
+    flex-direction:column;
+}
+#po_pi {
+    border:1px solid black;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
 }
 .pop_pics {
-    border: 1px solid black;
-    height:30%;
-    width:100%;
+    border:1px solid black;
 }
+
+/* Activités à Marseille */
 #activities {
     order:3;
-    height:230px;
+    width:100%;
     border:1px solid grey;
 }
 
 /* Pied de la page: liste d'aide */
 footer {
+    border: 1px solid black;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+#footer_block {
+    width:95%;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: flex-start;
+}
+/* A propos */
+#frst {
+    order:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start
+    border:1px solid grey;
+}
+/* Nos Hébergements */
+#scnd {
+    order:2;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    border:1px solid grey;
+}
+/* Assisstance */
+#thrd {
+    order:3;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    border:1px solid grey;
+}
+.txt {
+
+}
+
+
+/* Ajustement pour les smartphones */
+@media all and (max-device-width: 480px)
+{
+    /* Dimensions de page */
+body {
+    margin:30px;
+    display:flex;
+    flex-direction:column;
+}
+
+#block_page {
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Partie supérieure de la page: titre, filtres, navigation */
+header {
+    width:95%;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+
+#top {
+    border:1px solid grey;
+}
+#nav {
+    border:1px solid grey;
+}
+
+/* Contenu de la page: photos */
+section {
+    width:95%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+}
+#hos_pop {
+    margin: 15px 0 15px 0;
+    display:flex;
+    flex-flow:column wrap;
+    justify-content: space-between;
+}
+
+/* Hébergements à Marseille */
+#hosts {
+    order:1;
+    width:60%;
+    border:1px solid #808080;
+    display:flex;
+    flex-flow:column wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+#hosts_pics {
+    border:1px solid black;
+    width:90%;
+    display:flex;
+    flex-flow:column wrap;
+    align-items:center;
+}
+#ho_pi1 {
+    border:1px solid black;
     width:100%;
     display:flex;
     flex-direction:row;
-    justify-content: space-around;
+    justify-content:space-between;
+}
+#ho_pi2 {
+    border:1px solid black;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.pics {
+    border:1px solid black;
 }
 
+/* Les plus populaires */
+#popular {
+    width: 35%;
+    order:2;
+    border:1px solid grey;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-content:center;
+}
+#popular_pics {
+    border:1px solid black;
+    width:90%;
+    display:flex;
+    flex-direction:column;
+}
+#po_pi {
+    border:1px solid black;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+}
+.pop_pics {
+    border:1px solid black;
+}
+
+/* Activités à Marseille */
+#activities {
+    order:3;
+    width:100%;
+    border:1px solid grey;
+}
+
+/* Pied de la page: liste d'aide */
+footer {
+    border: 1px solid black;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+#footer_block {
+    width:95%;
+    display:flex;
+    flex-flow:column wrap;
+    justify-content: flex-start;
+}
+/* A propos */
 #frst {
     order:1;
-    width:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start
     border:1px solid grey;
 }
+/* Nos Hébergements */
 #scnd {
     order:2;
-    width:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
     border:1px solid grey;
 }
+/* Assisstance */
 #thrd {
     order:3;
-    width:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
     border:1px solid grey;
 }
+.txt {
 
-
-
-/* Adaptation aux smartphones */
-@media all and (max-device-width: 480px)
-{
-    body {
-        margin:30px;
-    }
-    
-    #block_page {
-        width: 100%;
-        border: 1px solid black;
-        display:flex;
-        flex-direction:column;
-    }
-    
-    header {
-        width:100%;
-        height:200px;
-        display:flex;
-        flex-direction: column;
-    }
-    
-    #top {
-        order:1;
-        height:25%;
-        border:1px solid grey;
-    }
-    #nav {
-        order:2;
-        height:75%;
-        border:1px solid grey;
-    }
-    
-    
-    section {
-        width:100%;
-        display: flex;
-        flex-direction:column;
-        flex-wrap: wrap;
-    }
-    #hos_pop {
-        display:flex;
-        flex-direction:column;
-    }
-    
-    #hosts {
-        order:2;
-        width:100%;
-        height:230px;
-        border:1px solid grey;
-    }
-    #popular {
-        width: 100%;
-        order:1;
-        height:230px;
-        border:1px solid grey;
-    }
-    #activities {
-        order:3;
-        height:230px;
-        border:1px solid grey;
-    }
-    
-    footer {
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        justify-content: space-around;
-    }
-    
-    #frst {
-        order:1;
-        width:auto;
-        border:1px solid grey;
-    }
-    #scnd {
-        order:2;
-        width:auto;
-        border:1px solid grey;
-    }
-    #thrd {
-        order:3;
-        width:auto;
-        border:1px solid grey;
-    }
 }
+}
+
+
+
+
