@@ -1,9 +1,17 @@
+/* Nouvelle police */
+@font-face {
+    font-family: 'Raleway';
+    src: url('raleway/Raleway.ttf');
+}
 /* Dimensions de page */
 body {
-    max-width:1440px;
+    font-family: 'Raleway';
     margin:auto;
     display:flex;
     flex-direction:column;
+}
+h2,h3 {
+    font-weight:bold;
 }
 #block_page {
     width: 100%;
@@ -20,46 +28,86 @@ header {
     flex-flow: column wrap;
     justify-content: flex-start;
 }
+/* Image de titre et liens de navigation */
 #top {
     width:100%;
-    border:1px solid black;
     display:flex;
     flex-direction:row;
+    align-items:center;
 }
 #top_1 {
     width:65%;
     display:flex;
     justify-content: flex-start;
 }
-#logo {
-    border:1px solid black;
+#logo  img{
+    width:97px;
+    height:45px;
 }
 #top_2 {
     width:20%;
     display:flex;
     justify-content:space-between;
 }
-.links {
-    border:1px solid black;   
+.links a {
+    color:#0065FC;
+    text-decoration:none;
 }
 #top_3 {
     width:15%;
     display:flex;
     justify-content: flex-end;
 }
-#login {
-    border:1px solid black;
+#login button{
+    font-size:large;
+    font-weight:bold;
+    border:none;
+    background-color:white;
+    color:#0065FC;
 }
+/* Block de navigation et filtres */
 #nav {
-    border:1px solid grey;
     display:flex;
     flex-direction:column;
 }
-#nav_txt {
-    border:1px solid black;
-}
+/* Barre de navigation */
 #nav_bar {
-    border:1px solid black;
+    display:flex;
+    flex-direction:row;
+    border:1px solid #F2F2F2;
+    border-radius: 10px;
+    width:360px;
+    height:40px;
+}
+#ico_loc {
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 40px;
+    background-color: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+}
+i {
+    margin: auto;
+}
+#search {
+    font-family: 'Raleway';
+    height: 40px;
+    width: 200px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border:none;
+}
+button {
+    font-family: 'Raleway';
+    height: 40px;
+    width: 120px;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #0065FC;
+    font-size: 16px;
+    background-color: #0065FC;
+    color: white;
 }
 #filters {
     border:1px solid black;
@@ -84,11 +132,11 @@ section {
 #hosts {
     order:1;
     width:60%;
-    border:1px solid #808080;
+    background-color:#F2F2F2;
+    border-radius:10px;
     display:flex;
     flex-direction:column;
     justify-content: flex-start;
-    align-content:center;
     align-items:center;
 }
 #hosts_adjust {
@@ -96,46 +144,65 @@ section {
     height:90%;
     display:flex;
     flex-direction:column;
-
+    justify-content: flex-start;
 }
 #hosts_pics {
-    border:1px solid black;
     height:100%;
     width:100%;
     display:flex;
     flex-flow:column wrap;
-    justify-content: space-around;
-    align-items:center;
+    justify-content:space-around;
 }
 #ho_pi1 {
-    border:1px solid black;
-    height:40%;
+    height:45%;
     width:100%;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
-    align-items: center;
 }
 #ho_pi2 {
-    border:1px solid black;
-    height:40%;
+    height:45%;
     width:100%;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
-    align-items:center;
 }
 .pics {
-    border:1px solid black;
+    background-color: white;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    border-radius:10px;
     width:31%;
     height:100%;
+}
+.pics figure {
+    height:95%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding:4px;
+}
+.pics img {
+    border-radius:10px 10px 0 0 ;
+    width:100%;
+    height:60%;
+}
+.pics figcaption {
+    border-radius:0 0 10px 10px;
+    width:100%;
+    height:35%;
+    font-size:small;
+    font-weight:bold;
 }
 
 /* Les plus populaires */
 #popular {
     width: 35%;
     order:2;
-    border:1px solid grey;
+    background-color:#F2F2F2;
+    border-radius:10px;
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
@@ -149,13 +216,11 @@ section {
     flex-direction: column;
 }
 #popular_pics {
-    border:1px solid black;
     width:100%;
     display:flex;
     flex-direction:column;
 }
 #po_pi {
-    border:1px solid black;
     height:100%;
     width:100%;
     display:flex;
@@ -164,13 +229,13 @@ section {
 }
 .pop_pics {
     border:1px solid black;
+    border-radius:10px;
     height:30%;
 }
 
 /* Activités à Marseille */
 #activities {
     order:3;
-    border:1px solid grey;
     width:100%;
     height:auto;
     display:flex;
@@ -182,7 +247,6 @@ section {
     flex-direction: column;
 }
 #activities_pics {
-    border:1px solid black;
     width:100%;
     height:auto;
 }
@@ -194,6 +258,7 @@ section {
 }
 .act_pics {
     border:1px solid black;
+    border-radius:10px;
     width:25%;
     height:auto;
     display:flex;
@@ -204,7 +269,7 @@ section {
 /* Pied de la page */
 footer {
     margin: 15px 0 15px 0;
-    border: 1px solid black;
+    background-color:#F2F2F2;
     width:100%;
     display:flex;
     flex-direction:column;
@@ -224,7 +289,6 @@ footer {
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
-    border:1px solid grey;
 }
 /* Nos Hébergements */
 #scnd {
@@ -234,7 +298,6 @@ footer {
     display:flex;
     flex-direction:column;
     justify-content: flex-start;
-    border:1px solid grey;
 }
 /* Assisstance */
 #thrd {
@@ -244,7 +307,6 @@ footer {
     display:flex;
     flex-direction:column;
     justify-content: flex-start;
-    border:1px solid grey;
 }
 
 
@@ -253,13 +315,13 @@ footer {
 
 @media all and (max-device-width: 480px)
 {
+    /* Dimensions de la page */
     body {
         margin:auto;
         display:flex;
         flex-direction:column;
         align-items: center;
     }
-    
     #block_page {
         width: 100%;
         display:flex;
@@ -269,16 +331,15 @@ footer {
     
     /* En-tête */
     header {
-        border:1px solid black;
         width:100%;
         display:flex;
         flex-flow: column wrap;
         justify-content: flex-start;
         align-items:center;
     }
+    /* Image de titre et liens de navigation */
     #top {
         width:95%;
-        border:1px solid black;
         display:flex;
         flex-flow:row wrap;
     }
@@ -288,8 +349,9 @@ footer {
         display:flex;
         justify-content: flex-start;
     }
-    #logo {
-        border:1px solid black;
+    #logo img {
+        width:97px;
+        height:45px;
     }
     #top_2 {
         order:2;
@@ -298,7 +360,8 @@ footer {
         justify-content:space-around;
     }
     .links {
-        border:1px solid black;   
+        width:100%;
+        text-align:center;   
     }
     #top_3 {
         order:1;
@@ -307,19 +370,14 @@ footer {
         justify-content: flex-end;
     }
     #login {
-        border:1px solid black;
+        width:100%;
+        text-align:end;
     }
+    /* Barre de navigation et filtres */
     #nav {
         width:95%;
-        border:1px solid grey;
         display:flex;
         flex-direction:column;
-    }
-    #nav_txt {
-        border:1px solid black;
-    }
-    #nav_bar {
-        border:1px solid black;
     }
     #filters {
         border:1px solid black;
@@ -340,9 +398,9 @@ footer {
     
     /* Hébergements à Marseille */
     #hosts {
+        background-color:white;
         order:2;
         width:100%;
-        border:1px solid #808080;
         display:flex;
         flex-direction:column;
         justify-content: flex-start;
@@ -356,7 +414,6 @@ footer {
         justify-content: space-around;
     }
     #hosts_pics {
-        border:1px solid black;
         width:100%;
         display:flex;
         flex-direction:column;
@@ -364,7 +421,6 @@ footer {
         align-items:center;
     }
     #ho_pi1 {
-        border:1px solid black;
         height:40%;
         width:100%;
         display:flex;
@@ -372,7 +428,6 @@ footer {
         align-items: center;
     }
     #ho_pi2 {
-        border:1px solid black;
         height:40%;
         width:100%;
         display:flex;
@@ -389,7 +444,6 @@ footer {
     #popular {
         width: 100%;
         order:1;
-        border:1px solid black;
         display:flex;
         flex-direction:column;
         justify-content:flex-start;
@@ -400,14 +454,12 @@ footer {
         flex-direction: column;
     }
     #popular_pics {
-        border:1px solid black;
         height:auto;
         width:100%;
         display:flex;
         flex-direction:column;
     }
     #po_pi {
-        border:1px solid black;
         width:100%;
         display:flex;
         flex-direction:column;
@@ -421,7 +473,6 @@ footer {
     /* Activités à Marseille */
     #activities {
         order:3;
-        border:1px solid grey;
         width:100%;
         height:auto;
         display:flex;
@@ -435,7 +486,6 @@ footer {
         flex-direction: column;
     }
     #activities_pics {
-        border:1px solid black;
         width:100%;
         height:auto;
     }
@@ -457,7 +507,6 @@ footer {
     /* Pied de la page */
     footer {
         margin: 15px 0 15px 0;
-        border: 1px solid black;
         width:100%;
         display:flex;
         flex-direction:column;
@@ -479,7 +528,6 @@ footer {
         display:flex;
         flex-direction:column;
         justify-content:flex-start;
-        border:1px solid grey;
     }
     /* Nos Hébergements */
     #scnd {
@@ -489,7 +537,6 @@ footer {
         display:flex;
         flex-direction:column;
         justify-content: flex-start;
-        border:1px solid grey;
     }
     /* Assisstance */
     #thrd {
@@ -499,7 +546,6 @@ footer {
         display:flex;
         flex-direction:column;
         justify-content: flex-start;
-        border:1px solid grey;
     }
 }
 

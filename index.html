@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <link href="style.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/94ea419123.js" crossorigin="anonymous"></script>
         <title>Reservia</title>
     </head>
 
@@ -14,15 +15,22 @@
             <header>
                 <div id="top">
                     <div id="top_1">
-                        <div id="logo">LOGO</div>
+                        <div id="logo">
+                            <img src="Projet 2 - Reservia/Logo/Reservia@3x.png" alt="Title image page" />
+                        </div>
                     </div>
-                    
                     <div id="top_2">
-                        <div class="links">LINKS</div>
-                        <div class="links">LINKS</div>
+                        <div class="links">
+                            <a href="#hosts">Hébergements</a>
+                        </div>
+                        <div class="links">
+                            <a href="#activities">Activités</a>
+                        </div>
                     </div>
                     <div id="top_3">
-                        <div id="login">LOGIN</div>
+                        <div id="login">
+                            <button type="input">S'inscrire</button>
+                        </div>
                     </div>                    
                 </div>
                 <div id="nav">
@@ -31,7 +39,11 @@
                         <p>En plein centre ville ou en pleine nature</p>
                     </div>
                     <div id="nav_bar">
-                        <h2>SEARCH BAR</h2>
+                        <div id="ico_loc">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <input type="search" id="search" name="q" autocomplete="off" aria-label="Ville">
+                        <button>Rechercher</button>
                     </div>
                     <div id="filters">
                         <h2>FILTERS</h2>
@@ -50,24 +62,48 @@
                             <div id="hosts_pics">
                                 <div id="ho_pi1"> 
                                     <div class="pics">
-                                        <p>Picture</p>
+                                        <figure>
+                                            <img src="Projet 2 - Reservia/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+                                                alt="Auberge de la cannebière" />
+                                            <figcaption>Auberge de la cannebière</figcaption>
+                                        </figure>
                                     </div>
                                     <div class="pics">
-                                        <p>Picture</p>
+                                        <figure >
+                                            <img src="Projet 2 - Reservia/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg"
+                                                alt="Hôtel du port" />
+                                            <figcaption>Hôtel du port</figcaption>
+                                        </figure>
                                     </div>
                                     <div class="pics">
-                                        <p>Picture</p>
+                                        <figure class="pics">
+                                            <img src="Projet 2 - Reservia/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg"
+                                                alt="Hôtel Les mouettes" />
+                                            <figcaption>Hôtel Les mouettes</figcaption>
+                                        </figure>
                                     </div>
                                 </div>
                                 <div id="ho_pi2">
                                     <div class="pics">
-                                        <p>Picture</p>
+                                        <figure>
+                                            <img src="Projet 2 - Reservia/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg"
+                                                alt="Hôtel de la mer" />
+                                            <figcaption>Hôtel de la mer</figcaption>
+                                        </figure>
                                     </div>
                                     <div class="pics">
-                                        <p>Picture</p>
+                                        <figure class="pics">
+                                            <img src="Projet 2 - Reservia/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
+                                                alt="Auberge Le Panier" />
+                                            <figcaption>Auberge Le Panier</figcaption>
+                                        </figure>
                                     </div>
                                     <div class="pics">
-                                        <p>Picture</p>
+                                        <figure class="pics">
+                                            <img src="Projet 2 - Reservia/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
+                                                alt="Hôtel chez Amina" />
+                                            <figcaption>Hôtel chez Amina</figcaption>
+                                        </figure>
                                     </div>
                                 </div>
                             </div>
@@ -142,17 +178,24 @@
                 <div id="footer_block">
                     <div id="frst">
                         <div class="txt">
-                            <h2>A propos</h2>
+                            <h3>A propos</h3>
+                            <p>Fonctionnement du site</p>
+                            <p>Conditions générales de vente</p>
+                            <p>Données et confidentialité</p>
                         </div>
                     </div>
                     <div id="scnd">
                         <div class="txt">
-                            <h2>Nos hébergements</h2>
+                            <h3>Nos hébergements</h3>
+                            <p>Charte qualité</p>
+                            <p>Soumettre votre hôtel</p>
                         </div>
                     </div>
                     <div id="thrd">
                         <div class="txt">
-                            <h2>Assistance</h2>
+                            <h3>Assistance</h3>
+                            <p>Centre d'aide</p>
+                            <p>Nous contacter</p>
                         </div>
                     </div>
                 </div>
