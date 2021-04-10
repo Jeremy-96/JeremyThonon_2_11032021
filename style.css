@@ -6,7 +6,7 @@
 /* Dimensions de page */
 body {
     font-family: 'Raleway';
-    margin:auto;
+    margin:30px;
     display:flex;
     flex-direction:column;
 }
@@ -50,8 +50,11 @@ header {
     justify-content:space-between;
 }
 .links a {
-    color:#0065FC;
+    color:black;
     text-decoration:none;
+}
+a:active {
+    color:#0065FC;
 }
 #top_3 {
     width:15%;
@@ -127,6 +130,12 @@ section {
     flex-flow:row wrap;
     justify-content: space-between;
 }
+.fas {
+    color:#0065FC;
+}
+.far {
+    color:#F2F2F2;
+}
 
 /* Hébergements à Marseille */
 #hosts {
@@ -154,35 +163,28 @@ section {
     justify-content:space-around;
 }
 #ho_pi1 {
-    height:45%;
+    height:40%;
     width:100%;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
 }
 #ho_pi2 {
-    height:45%;
+    height:40%;
     width:100%;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
 }
 .pics {
+    margin:10px;
     background-color: white;
-    display:flex;
-    flex-direction:column;
     align-items: center;
-    border-radius:10px;
-    width:31%;
-    height:100%;
-}
-.pics figure {
-    height:95%;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
     padding:4px;
+    border-radius:10px;
+    width:33%;
+    height:80%;
+    line-height:0.2em;
 }
 .pics img {
     border-radius:10px 10px 0 0 ;
@@ -190,11 +192,14 @@ section {
     height:60%;
 }
 .pics figcaption {
+    padding:6px;
     border-radius:0 0 10px 10px;
+    text-align:left;
     width:100%;
-    height:35%;
-    font-size:small;
-    font-weight:bold;
+    height:40%;
+}
+.pics h4{
+    font-weight: bold;
 }
 
 /* Les plus populaires */
@@ -217,6 +222,7 @@ section {
 }
 #popular_pics {
     width:100%;
+    height:100%;
     display:flex;
     flex-direction:column;
 }
@@ -225,12 +231,29 @@ section {
     width:100%;
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+    justify-content:space-around;
+    align-items:center;
 }
 .pop_pics {
-    border:1px solid black;
+    display:flex;
+    flex-direction:row;
     border-radius:10px;
-    height:30%;
+    max-height:33%;
+    background-color: white;
+    align-items: center;
+    padding:4px;
+    width:90%;
+}
+.pop_pics img {
+    border-radius:10px 0 0 10px;
+    max-width:40%;
+    height:100%;
+}
+.pop_pics figcaption {
+    padding:6px;
+    border-radius:0 10px 10px 0;
+    max-width:60%;
+    height:100%;
 }
 
 /* Activités à Marseille */
