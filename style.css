@@ -6,6 +6,7 @@
 /* Dimensions de page */
 body {
     font-family: 'Raleway';
+    margin-top:30px;
 }
 #block_page {
     display:flex;
@@ -39,6 +40,7 @@ i {
     height:45px;
 }
 #top_2 {
+    padding:20px;
     width:20%;
     display:flex;
     justify-content:space-between;
@@ -47,6 +49,11 @@ i {
     color:#0065FC;
     text-decoration:none;
 }
+.links a:hover {
+    border-top:1px solid #0065FC;
+    padding-top:30px;
+}
+
 #top_3 {
     width:15%;
     display:flex;
@@ -116,6 +123,14 @@ button {
     flex-direction:row;
     justify-content: space-between;
     align-items:center;
+}
+.hover_filter {
+    text-decoration:none;
+    color:black;
+}
+ .hover_filter:hover {
+    border-radius:20px;
+    background-color:goldenrod;
 }
 .fil {
     display:flex;
@@ -456,6 +471,10 @@ i {
 .links a {
     color:#0065FC;
     text-decoration:none;
+}
+.links a:hover {
+    border-top:1px solid #0065FC;
+    padding-top:30px;
 }
 #top_3 {
     order:1;
