@@ -3,6 +3,7 @@
     font-family: 'Raleway';
     src: url('raleway/Raleway.ttf');
 }
+
 /* Dimensions de page */
 body {
     font-family: 'Raleway';
@@ -116,13 +117,13 @@ button {
 #filters {
     margin:25px 25px 25px 0;
     display:flex;
-    flex-direction:column;
     justify-content:flex-start;
 }
 #filters_adjust {
     width:70%;
     display:flex;
-    justify-content: space-between;
+    flex-flow:row wrap;
+    justify-content: space-around;
     align-items:center;
 }
 .hover_filter {
@@ -471,409 +472,309 @@ footer {
 
 @media all and (max-device-width: 480px)
 {
-  /* Nouvelle police */
-@font-face {
-    font-family: 'Raleway';
-    src: url('raleway/Raleway.ttf');
-}
-/* Dimensions de page */
-body {
-    font-family: 'Raleway';
-    display:flex;
-    flex-direction:column;
-}
-#block_page {
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-}
-
-/* En-tête */
-header {
-    display:flex;
-    flex-wrap:wrap;
-}
-/* Image de titre et liens de navigation */
-i {
-    margin:auto;
-}
-#top {
-    width:95%;
-    display:flex;
-    flex-wrap: wrap;
-    align-items:center;
-    justify-content: space-around;
-}
-#top_1 {
-    order:1;
-    width:50%;
-    display:flex;
     
-    align-items:center;
-}
-#logo  img{
-    width:97px;
-    height:45px;
-}
-#top_2 {
-    order:2;
-    width:100%;
-    display:flex;
-    justify-content:space-around;
-}
-.links a {
-    color:#0065FC;
-    text-decoration:none;
-}
-.links a:hover {
-    border-top:1px solid #0065FC;
-    padding-top:30px;
-}
-#top_3 {
-    order:1;
-    width:50%;
-    display:flex;
-    align-items:center;
+    /* Dimensions de page */
+    body {
+        font-family: 'Raleway';
+        margin-top:30px;
+        display: flex;
+        align-items:center;
+    }
+    #block_page {
+        width:auto;
+        align-items:center;
+    }
+
+    /* En-tête */
+    header {
+        align-items:center;
+    }
+    /* Image de titre et liens de navigation */
     
-}
-#login input{
-    font-size:large;
-    font-weight:bold;
-    border:none;
-    background-color:white;
-    color:#0065FC;
-}
-/* Block de navigation et filtres */
-#nav {
-    display:flex;
-    flex-flow:column wrap;
-    justify-content: flex-start;
-}
-/* Barre de navigation */
-form {
-    display:flex;
-}
-#nav_bar {
-    display:flex;
-    border:1px solid #F2F2F2;
-    border-radius: 10px;
-    width:480px;
-    height:40px;
-}
-#ico_loc {
-    display: flex;
-    height: 40px;
-    width: 40px;
-    background-color: #F2F2F2;
-    border-radius: 10px 0 0 10px;
-}
-#ico_loc i {
-    margin: auto;
-    color: black;
-}
-#search {
-    font-family: 'Raleway';
-    height: 40px;
-    width: 300px;
-    padding-left: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    border:none;
-}
-button {
-    font-family: 'Raleway';
-    height: 40px;
-    width: 140px;
-    border-radius: 0 10px 10px 0;
-    border: 1px solid #0065FC;
-    font-size: 16px;
-    background-color: #0065FC;
-    color: white;
-}
-
-/* Filtres */
-#filters {
-    width:100%;
-    border:1px solid black;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-}
-#filters_adjust {
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    align-items:left;
-}
-.fil {
-    margin:5px;
-    display:flex;
-    justify-content: flex-start;
-    height:35px;
-    border:2px solid #F2F2F2;
-    border-left:none;
-    border-radius:20px;
-}
-.fil p {
-    font-weight:bold;
-    margin: 0 15px 0 15px;
-}
-.bulle {
-    display:flex;
-    align-items:center;
-    height:40px;
-    width:40px;
-    background-color:#DEEBFF;
-    border-radius:20px;
+    #top {
+        display:flex;
+        flex-flow:row wrap;
+    }
+    #top_1 {
+        order:1;
+        width:50%;
+        justify-content: flex-start;
+    }
+    #top_2 {
+        width:100%;
+        order:3;
+        padding:20px;
+        display:flex;
+        justify-content:space-around;
+    }
+    .links a {
+        color:#0065FC;
+        text-decoration:none;
+    }
+    .links a:hover {
+        border-bottom:2px solid #0065FC;
+        border-top:none;
+        padding-bottom:10px;
+    }
+    #top_3 {
+        order:1;
+        width:50%;
+        display:flex;
+        justify-content: flex-end;
+    }
+    /* Block de navigation et filtres */
+    #nav {
+        display:flex;
+        flex-flow:column wrap;
+    }
     
-}
-p .fas {
-    color:#0065FC;
+    /* Filtres */
+    #filters {
+        flex-flow:column wrap;
+    }
+    #filters_adjust {
+        justify-content: flex-start;
+        width:300px;
+    }
     
-}
-/* Contenu de la page: photos */
-section {
-    width:100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
-}
-#hos_pop {
-    width:100%;
-    margin: 15px 0 15px 0;
-    display:flex;
-    flex-direction:column;
-}
-.fas {
-    color:#0065FC;
-}
-.far {
-    color:#F2F2F2;
-}
+    /* Contenu de la page: photos */
+    section {
+        width:95%;
+        align-items:center;
+    }
+    #hos_pop {
+        flex-direction:column;
+        justify-content: flex-start;
+        align-items:center;
+        
+    }
+    .fas {
+        color:#0065FC;
+    }
+    .far {
+        color:#F2F2F2;
+    }
 
-/* Hébergements à Marseille */
-#hosts {
-    width:95%;
-    order:2;
-    background-color:white;
-    border-radius:25px;
-    display:flex;
-    flex-flow:column;
-    justify-content: flex-start;
-}
-#hosts_pics {
-    height:80%;
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-}
-#ho_pi1 {
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    align-items:center;
-}
-#ho_pi1 a {
-    text-decoration:none;
-    color:black;
-    font-weight:bold;
-}
-#ho_pi2 {
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    align-items:center;
-}
-#ho_pi2 a {
-    text-decoration:none;
-    color:black;
-    font-weight:bold;
-}
-.pics {
-    margin:1px;
-    width:100%;
-    height:80%;
-    background-color: white;
-    align-items: center;
-    padding:5px;
-    border-radius:25px;
-    line-height:0.3em;
-    box-shadow: 3px 3px 8px gainsboro;
-}
-.pics img {
-    border-radius:25px 25px 0 0 ;
-    width:100%;
-    height:60%;
-}
-.pics figcaption {
-    padding:7px;
-    border-radius:0 0 25px 25px;
-    text-align:left;
-    width:100%;
-    height:40%;
-}
-.hosts_pics h3 h2{
-    height:10%;
-    font-weight: bold;
-}
-
-/* Les plus populaires */
-#popular {
-    width:100%;
-    order:1;
-    background-color:#F2F2F2;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    align-items: center;
-}
-#popular_pics {
-    display:flex;
-    flex-direction:column;
-    width:95%;
-}
-#po_pi {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-.pop_pics {
-    display:flex;
-    border-radius:25px;
-    background-color: white;
-    padding:5px;
-    width:100%;
-    height:20%;
-    box-shadow: 3px 3px 8px gainsboro;
-}
-.pop_pics img {
-    border-radius:25px 0 0 25px;
-    width:40%;
-}
-.pop_pics figcaption {
-    padding:7px;
-    border-radius:0 25px 25px 0;
-    width:60%;
-}
-#popular_pics h2 {
-    height:10%;
-    font-weight:bold;
-}
-.fa-chart-line {
-    margin-left:650px;
-    color: black;
-}
-
-/* Activités à Marseille */
-#activities {
-    order:3;
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    width:95%;
-}
-#activities h2 {
-    margin-left:35px;
-    font-weight:bold;
-}
-#activities a {
-    text-decoration:none;
-    color:black;
-    font-weight:bold;
-}
-#activities_pics {
-    display:flex;
-    flex-direction:column;
-}
-.act_pics {
-    width:100%;
-    border-radius:25px;
-    display:flex;
-    flex-direction:column;
-    box-shadow: 3px 3px 8px gainsboro;
-}
-.act_pics_double {
-    width:100%;
-    border-radius:25px;
-    display:flex;
-    flex-direction:column;
-    box-shadow: 3px 3px 8px gainsboro;
-}
-#container_double1 {
-    width:100%;
-    display:flex;
-    flex-direction:column;
-}
-#container_double2 {
-    width:100%;
-    display:flex;
-    flex-direction:column;
+    /* Hébergements à Marseille */
+    #hosts {
+        order:2;
+        background-color:white;
+        flex-flow:column wrap;
+        justify-content: flex-start;
+    }
+    #ho_pi1 {
+        height:auto;
+        width:100%;
+        display:flex;
+        flex-direction:column;  
+    }
     
-}
-.act_pics img {
-    border-radius:25px 25px 0 0;
-    height:80%;
-    width:100%;
-}
-.act_pics figcaption {
-    border-radius: 0 25px 25px 0;
-    padding-left:10px;
-    height:10%;
-    width:100%;
-}
-.act_pics h4 {
-    font-weight:bold;
-}
-.act_pics_double img {
-    border-radius:25px 25px 0 0;
-    height:80%;
-    width:100%;
-}
-.act_pics_double figcaption {
-    border-radius: 0 25px 25px 0;
-    padding-left:10px;
-    height:10%;
-    width:100%;
-}
+    #ho_pi2 {
+        height:auto;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+    }
+    
+    .pics {
+        height:auto;
+        width:460px;
+    }
+    .pics img {
+        width:460px;
+        height:150px;
+    }
+    .pics figcaption {
+        height:60px;
+    }
+    
+    /* Les plus populaires */
+    #popular {
+        width:100%;
+        padding:20px;
+        order:1;
+        background-color:#F2F2F2;
+        border-radius:0;
+        align-items:center;
+        
+    }
+    #po_pi {
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+        width:460px;
+    }
+    .pop_pics {
+        display:flex;
+        border-radius:20px;
+        background-color: white;
+        padding:5px;
+        width:460px;
+        height:180px;
+        box-shadow: 3px 3px 8px gainsboro;
+        line-height: 1,2em;
+    }
+    .pop_pics img {
+        border-radius:20px 0 0 20px;
+        object-fit: cover;
+        width:200px;
+    }
+    .pop_pics figcaption {
+        padding-left:7px;
+        border-radius:0 20px 20px 0;
+        width:260px;
+    }
+    #popular_pics h2 {
+        font-weight:bold;
+    }
+    .fa-chart-line {
+        margin-left:400px;
+        color: black;
+    }
 
-/* Pied de la page */
-footer {
-    margin: 15px 0 15px 0;
-    background-color:#F2F2F2;
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-}
-#footer_block {
-    width:95%;
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-start;
-}
-/* A propos */
-#frst {
-    order:1;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-}
-/* Nos Hébergements */
-#scnd {
-    order:2;
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-start;
-}
-/* Assisstance */
-#thrd {
-    order:3;
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-start;
-}  
+    /* Activités à Marseille */
+    #activities {
+        flex-direction:column;
+        width:95%;
+        height:auto;
+    }
+    #activities_pics {
+        width:100%;
+        height:auto;
+        flex-direction:column;
+        justify-content:space-around;
+    }
+    .act_pics {
+        width:460px;
+        height:230px;
+        margin-bottom:10px;
+    }
+    .act_pics img {
+        object-fit: cover;
+        height:180px;
+        width:460px;
+    }
+    .act_pics figcaption {
+        border-radius: 0 20px 20px 0;
+        padding-left:10px;
+        height:50px;
+        width:460px;
+    }
+    
+    #container_double1 {
+        display:flex;
+        flex-flow:column wrap;
+        justify-content: space-around;
+        height:480px;
+        width:460px;
+    }
+    .act_pics_double1 {
+        margin:0;
+        height:230px;
+        width:460px;
+        border-radius:20px;
+        display:flex;
+        flex-direction:column;
+        box-shadow: 3px 3px 8px gainsboro;
+        margin-bottom:10px;
+    }
+    .act_pics_double1 img {
+        object-fit: cover;
+        border-radius:20px 20px 0 0;
+        height:180px;
+        width:460px;
+    }
+    .act_pics_double1 figcaption {
+        border-radius: 0 20px 20px 0;
+        padding-left:10px;
+        height:50px;
+        width:460px;
+    }
+    .act_pics_double2 {
+        margin:0;
+        width:460px;
+        height:230px;
+        border-radius:20px;
+        display:flex;
+        flex-direction:column;
+        box-shadow: 3px 3px 8px gainsboro;
+        margin-bottom:10px;
+    }
+    .act_pics_double2 img {
+        object-fit: cover;
+        border-radius:20px 20px 0 0;
+        height:180px;
+        width:460px;
+    }
+    .act_pics_double2 figcaption {
+        border-radius: 0 20px 20px 0;
+        padding-left:10px;
+        height:50px;
+        width:460px;
+    }
+    #container_double2 {
+        display:flex;
+        flex-direction:column;
+        height:470px;
+        width:460px;
+    }
+    .act_pics_double3 {
+        margin:0;
+        height:230px;
+        width:460px;
+        border-radius:20px;
+        display:flex;
+        flex-direction:column;
+        box-shadow: 3px 3px 8px gainsboro;
+        margin-bottom:10px;
+    }
+    .act_pics_double3 img {
+        object-fit: cover;
+        border-radius:20px 20px 0 0;
+        height:180px;
+        width:460px;
+    }
+    .act_pics_double3 figcaption {
+        border-radius: 0 20px 20px 0;
+        padding-left:10px;
+        height:50px;
+        width:460px;
+    }
+    .act_pics_double4 {
+        margin:0;
+        height:230px;
+        border-radius:20px;
+        display:flex;
+        flex-direction:column;
+        box-shadow: 3px 3px 8px gainsboro;
+        margin-bottom:10px;
+    }
+    .act_pics_double4 img {
+        object-fit: cover;
+        border-radius:20px 20px 0 0;
+        height:180px;
+        width:460px;
+    }
+    .act_pics_double4 figcaption {
+        border-radius: 0 20px 20px 0;
+        padding-left:10px;
+        height:50px;
+        width:460px;
+    }
+
+    /* Pied de la page */
+    #footer_block {
+        flex-direction:column;
+    }
+    #frst {
+        width:100%;
+    }
+    #scnd {
+        width:100%;
+    }
+    #thrd {
+        width:100%;
+    }
 }
 
 
