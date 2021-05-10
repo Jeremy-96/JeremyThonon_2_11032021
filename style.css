@@ -195,6 +195,7 @@ button {
 
 /* Contenu de la page: photos */
 section {
+    height:auto;
     width:100%;
     display: flex;
     flex-flow: column wrap;
@@ -202,6 +203,7 @@ section {
     align-items:center;
 }
 #hos_pop {
+    height:auto;
     width:95%;
     margin: 15px 0 15px 0;
     display:flex;
@@ -211,59 +213,63 @@ section {
 /* Hébergements à Marseille */
 #hosts {
     order:1;
+    height:auto;
     width:60%;
-    padding:25px;
     background-color:#F2F2F2;
     border-radius:20px;
     display:flex;
     flex-flow:column wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-content:center;
 }
 .intro_hosts {
-    width:100%;
+    width:90%;
 }
 #ho_pi1, #ho_pi2 {
-    height:250px;
+    width:90%;
     display:flex;
+    flex-wrap:wrap;
     justify-content:space-between;
 }
 #ho_pi1 a, #ho_pi2 a {
     text-decoration:none;
     color:black;
     font-weight:bold;
-    height:88%;
+    width:30%;
+    display:flex;
+    flex-direction:column;
+    align-content:center;
 }
 .pics {
     margin:0;
-    width:250px;
-    height:210px;
+    width:100%;
+    height:200x;
     background-color: white;
-    align-items: center;
     padding:5px;
     border-radius:20px;
-    line-height:0.1em;
+    line-height:0.8em;
     box-shadow: 3px 3px 8px gainsboro;
 }
 .pics img {
     object-fit: cover;
     border-radius:20px 20px 0 0 ;
-    width:250px;
-    height:120px;
+    width:100%;
+    height:115px;
 }
 .pics figcaption {
     padding-left:7px;
     border-radius:0 0 20px 20px;
     text-align:left;
-    width:250px;
-    height:90px;
+    width:100%;
+    height:85px;
 }
 .show_more {
     width:90%;
 }
 /* Les plus populaires */
 #popular {
-    width: 30%;
-    padding:25px;
+    height:auto;
+    width: 35%;
     order:2;
     background-color:#F2F2F2;
     border-radius:20px;
@@ -273,45 +279,41 @@ section {
     align-items:center; 
 }
 .intro_pop {
-    width:95%;
+    width:90%;
     display:flex;
-    justify-content: space-between;
-}
-#po_pi {
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-}
-.pop_pics {
-    display:flex;
-    border-radius:20px;
-    background-color: white;
-    padding:5px;
-    width:420px;
-    height:150px;
-    box-shadow: 3px 3px 8px gainsboro;
-    line-height: 1.2em;
-}
-.pop_pics img {
-    border-radius:20px 0 0 20px;
-    object-fit: cover;
-    width:160px;
-}
-.pop_pics figcaption {
-    padding-left:7px;
-    border-radius:0 20px 20px 0;
-    width:250px;
-}
-.pop_pics i {
-    margin-top:20px;
-}
-.intro_pop {
-    display:flex;
-    align-items:center;
     justify-content: space-between;
 }
 .fa-chart-line {
     color: black;
+}
+#po_pi {
+    width:90%;
+    display:flex;
+    flex-flow:column wrap;
+    align-content:center;
+}
+.pop_pics {
+    width:100%;
+    height:150px;
+    background-color: white;
+    box-shadow: 3px 3px 8px gainsboro;
+    line-height: 1.2em;
+    border-radius:20px;
+    padding:5px;
+    display:flex;
+}
+.pop_pics img {
+    border-radius:20px 0 0 20px;
+    object-fit: cover;
+    width:40%;
+}
+.pop_pics figcaption {
+    padding-left:7px;
+    border-radius:0 20px 20px 0;
+    width:60%;
+}
+.pop_pics i {
+    margin-top:20px;
 }
 /* Activités à Marseille */
 #activities {
@@ -494,105 +496,6 @@ footer {
     color:black;
 }
 
-@media all and (max-width:1350px)
-{
-    /* Contenu de la page: photos */
-    section {
-        width:100%;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: flex-start;
-        align-items:center;
-    }
-    #hos_pop {
-        width:95%;
-        margin: 15px 0 15px 0;
-        display:flex;
-        flex-flow:column wrap;
-        justify-content: space-around;
-    }
-    /* Hébergements à Marseille */
-    #hosts {
-        order:2;
-        width:100%;
-        padding:0;
-        background-color:white;
-        border-radius:20px 20px 0 0;
-        display:flex;
-        flex-flow:column wrap;
-        justify-content: flex-start;
-        align-items:center;
-    }
-    .intro_hosts {
-        width:95%;
-    }
-    #ho_pi1, #ho_pi2 {
-        width:95%;
-        height:250px;
-        display:flex;
-        justify-content:space-between;
-    }
-    .pics {
-        margin:0;
-        width:280px;
-    }
-    .pics img {
-        width:280px;
-    }
-    .pics figcaption {
-        width:280px;
-    }
-    .show_more {
-        width:95%;
-    }
-    /* Les plus populaires */
-    #popular {
-        width: 100%;
-        padding:0;
-        margin:0;
-        order:1;
-        background-color:#F2F2F2;
-        border-radius:20px;
-        display:flex;
-        flex-direction:column;
-        justify-content:flex-start;
-        align-items:center; 
-    }
-    .intro_pop {
-        width:95%;
-    }
-    #po_pi {
-        width:95%;
-        justify-content:space-between;
-    }
-    .pop_pics {
-        display:flex;
-        border-radius:20px;
-        background-color: white;
-        padding:5px;
-        width:100%;
-        height:200px;
-        line-height: 1.2em;
-    }
-    .pop_pics img {
-        border-radius:20px 0 0 20px;
-        object-fit: cover;
-        width:40%;
-    }
-    .pop_pics figcaption {
-        padding-left:7px;
-        border-radius:0 20px 20px 0;
-        width:60%;
-    }
-    .pop_pics i {
-        margin-top:20px;
-    }
-    .intro_pop {
-        display:flex;
-        align-items:center;
-        justify-content: space-between;
-}
-}
 /* BREAKPOINT */
 /* Ajustement pour les tablettes */
 
@@ -686,10 +589,14 @@ footer {
         flex-direction:column;
         justify-content: space-between;
     }
+    #ho_pi1 a, #ho_pi2 a {
+        width:100%;
+    }
     .pics {
         margin:5px 0 5px 0;
         width:100%;
         height:210px;
+        line-height:0.4em;
     }
     .pics img {
         width:100%;
@@ -961,6 +868,7 @@ footer {
         width:100%;
         padding:0;
         margin:0 0 10px 0;
+        line-height:0.1em;
     }
     .pics img {
         width:100%;
