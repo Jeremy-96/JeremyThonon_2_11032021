@@ -243,7 +243,7 @@ section {
 .pics {
     margin:0;
     width:100%;
-    height:200x;
+    height:auto;
     background-color: white;
     padding:5px;
     border-radius:20px;
@@ -282,9 +282,11 @@ section {
     width:90%;
     display:flex;
     justify-content: space-between;
+    align-items:center;
 }
 .fa-chart-line {
     color: black;
+    font-size:24px;
 }
 #po_pi {
     width:90%;
@@ -326,15 +328,20 @@ section {
 }
 #activities_pics {
     height:auto;
+    width:100%;
     display:flex;
-    flex-flow:row wrap;
     justify-content:space-between;
+}
+#simple1 {
+    width:22%;
+}
+#simple2 {
+    width:22%;
 }
 .act_pics {
     margin:0;
     border-radius:20px;
     height:500px;
-    width:325px;
     display:flex;
     flex-direction:column;
     box-shadow: 3px 3px 8px gainsboro;
@@ -342,20 +349,20 @@ section {
 .act_pics img {
     object-fit: cover;
     border-radius:20px 20px 0 0;
-    height:450px;
+    height:440px;
     width:100%;
 }
 .act_pics figcaption {
     border-radius: 0 20px 20px 0;
     padding-left:10px;
-    height:50px;
+    height:60px;
     width:100%;
 }
 #container_double1 {
     display:flex;
     flex-direction:column;
     justify-content: space-between;
-    width:325px;
+    width:22%;
     height:500px;
 }
 .act_pics_double1 {
@@ -369,13 +376,13 @@ section {
 .act_pics_double1 img {
     object-fit: cover;
     border-radius:20px 20px 0 0;
-    height:250px;
+    height:240px;
     width:100%;
 }
 .act_pics_double1 figcaption {
     border-radius: 0 20px 20px 0;
     padding-left:10px;
-    height:50px;
+    height:60px;
     width:100%;
 }
 .act_pics_double2 {
@@ -389,20 +396,20 @@ section {
 .act_pics_double2 img {
     object-fit: cover;
     border-radius:20px 20px 0 0;
-    height:100px;
+    height:90px;
     width:100%;
 }
 .act_pics_double2 figcaption {
     border-radius: 0 20px 20px 0;
     padding-left:10px;
-    height:50px;
+    height:60px;
     width:100%;
 }
 #container_double2 {
     display:flex;
     flex-direction:column;
     justify-content: space-between;
-    width:325px;
+    width:22%;
     height:500px;
 }
 .act_pics_double3 {
@@ -416,13 +423,13 @@ section {
 .act_pics_double3 img {
     object-fit: cover;
     border-radius:20px 20px 0 0;
-    height:175px;
+    height:165px;
     width:100%;
 }
 .act_pics_double3 figcaption {
     border-radius: 0 20px 20px 0;
     padding-left:10px;
-    height:50px;
+    height:60px;
     width:100%;
 }
 .act_pics_double4 {
@@ -436,13 +443,13 @@ section {
 .act_pics_double4 img {
     object-fit: cover;
     border-radius:20px 20px 0 0;
-    height:175px;
+    height:165px;
     width:100%;
 }
 .act_pics_double4 figcaption {
     border-radius: 0 20px 20px 0;
     padding-left:10px;
-    height:50px;
+    height:60px;
     width:100%;
 }
 /* Animation au survol des images hébergements et activités */
@@ -650,16 +657,24 @@ footer {
         justify-content:space-between;
         height:auto;
     }
-    .act_pics {
+    #simple1, #simple2 {
         height:330px;
-        width:325px;;
+        width:50%;
+    }
+    .act_pics {
+        height:100%;
+        width:100%;
     }
     .act_pics img {
-        height:300px;
+        height:280px;
+        width:100%;
+    }
+    .act_pics figcaption {
+        height:50px;
         width:100%;
     }
     #container_double1, #container_double2 {
-        width:325px;
+        width:45%;
         height:330px;
         margin:0 0 10px 0;
         justify-content: space-between;
@@ -923,7 +938,7 @@ footer {
         height:auto;
         flex-direction:column;
     }
-    #container_double1, #container_double2 {
+    #simple1, #simple2, #container_double1, #container_double2 {
         margin:0;
         height:auto;
         width:100%;
